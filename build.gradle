@@ -1,0 +1,18 @@
+plugins {
+	id 'groovy'
+	id 'application'
+	id 'eclipse'
+}
+
+task wrapper(type: Wrapper) {  gradleVersion = '3.5' }
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	testCompile group:'com.lesfurets', name:'jenkins-pipeline-unit', version:'0.12'
+	testCompile 'junit:junit:4.12'
+	testCompile 'org.assertj:assertj-core:3.6.2'
+}
