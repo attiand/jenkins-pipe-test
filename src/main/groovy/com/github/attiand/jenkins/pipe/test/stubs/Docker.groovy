@@ -1,4 +1,4 @@
-package stubs
+package com.github.attiand.jenkins.pipe.test.stubs
 
 class Docker {
 	def image(def name) {

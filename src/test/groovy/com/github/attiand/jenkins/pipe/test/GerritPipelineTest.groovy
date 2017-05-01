@@ -1,4 +1,4 @@
-package test;
+package com.github.attiand.jenkins.pipe.test;
 
 import org.junit.Before
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.junit.experimental.results.ResultMatchers
 
 import static groovy.util.GroovyTestCase.assertEquals
 
-import stubs.Docker
+import com.github.attiand.jenkins.pipe.test.stubs.Docker
 import com.lesfurets.jenkins.unit.BasePipelineTest
 import static com.lesfurets.jenkins.unit.global.lib.LibraryConfiguration.library
 import static com.lesfurets.jenkins.unit.global.lib.GitSource.gitSource
