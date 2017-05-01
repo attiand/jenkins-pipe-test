@@ -6,7 +6,7 @@ import org.junit.experimental.results.ResultMatchers
 
 import static groovy.util.GroovyTestCase.assertEquals
 
-import stub.docker.Docker
+import stubs.Docker
 import com.lesfurets.jenkins.unit.BasePipelineTest
 import static com.lesfurets.jenkins.unit.global.lib.LibraryConfiguration.library
 import static com.lesfurets.jenkins.unit.global.lib.GitSource.gitSource
@@ -29,16 +29,14 @@ public class GerritPipelineTest extends BasePipelineTest {
 				.retriever(gitSource('https://github.com/attiand/pipeline-lib.git'))
 				.targetPath(System.getProperty('java.io.tmpdir'))
 				.defaultVersion('master')
-				.allowOverride(true)
-				.implicit(false)
 				.build()
-				
+
 		helper.registerSharedLibrary(library)
 
 		Script script = loadScript("job/Jenkinsfile")
 
 		printCallStack()
-		
+
 		assertJobStatusSuccess()
 	}
 }
